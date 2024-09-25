@@ -14,7 +14,7 @@ const StoreContextProvider = (props) => {
             setcartItems((prev)=>({...prev,[itemId]:1}))
         }
         else {
-            setcartItems((prev)=>({...prev,[itemId]:prev[itemId+1]}))
+            setcartItems((prev)=>({...prev,[itemId]:prev[itemId] + 1}))
         }
     }
 
@@ -24,7 +24,7 @@ const StoreContextProvider = (props) => {
 
     useEffect(()=> {
          console.log(cartItems);
-         
+          
     },[cartItems])
 
     const contextValue ={
@@ -37,7 +37,7 @@ const StoreContextProvider = (props) => {
 
     
     return (
-        <StoreContext.Provider value={contextValue}>
+        <StoreContext.Provider value={contextValue} >
              {props.children}
         </StoreContext.Provider>
     )
