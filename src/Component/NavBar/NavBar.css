@@ -6,7 +6,7 @@
 }
 
 .NavBar .logo{
-    width: 150px;
+    width: 100px;
 }
 
 .NavBar-menu{
@@ -96,6 +96,11 @@
     .NavBar-right button{
         padding: 8px 20px;
         font-size: 15px;
+    }
+
+    .logo-logo{
+        width: 70px;
+        height: 60px;
     }
 }
 @media (max-width:750px) {
